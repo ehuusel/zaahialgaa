@@ -96,7 +96,7 @@ export default function App() {
           <div className="flex items-center gap-3">
             <Logo />
             <div>
-              <h1 className="text-xl font-bold">Захиалга шалгах</h1>
+              <h1 className="text-xl font-bold">Захиалга Шалгах</h1>
               <p className="text-xs text-gray-500">{settings.brand}</p>
             </div>
           </div>
