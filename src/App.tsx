@@ -154,12 +154,14 @@ export default function App() {
 }
 
 /* ----------------- Customer ----------------- */
-function CustomerView({ orders }) {
+function CustomerView({ orders }: { orders: any[] }) {
   const [code, setCode] = useState("");
   const [phone, setPhone] = useState("");
-  const [results, setResults] = useState(null); // null=эхлэх үе, []=олдоогүй, [...]=илэрцүүд
+  const [results, setResults] = useState<any[] | null>(null);
+  // null=эхлэх үе, []=олдоогүй, [...]=илэрцүүд
 
-  const normalize = (s) => String(s || "").replace(/\D/g, ""); // тооноос бусдыг авч хаяна (зай, "-" гэх мэт)
+  const normalize = (s: string) => String(s || "").replace(/\D/g, "");
+  // тооноос бусдыг авч хаяна (зай, "-" гэх мэт)
 
   function handleFind() {
     const c = code.trim();
@@ -697,7 +699,7 @@ function OrdersTable({
       onChange(orders.filter((o: any) => o.id !== id));
   }
 
-  function goNext(order) {
+  function goNext(order: any) {
     const i = STATUSES.indexOf(order.status);
     if (i === -1 || i >= STATUSES.length - 1) return;
     update(order.id, { status: STATUSES[i + 1] });
