@@ -97,7 +97,7 @@ export default function App() {
             <Logo />
             <div>
               <h1 className="text-xl font-bold">
-                Захиалга & Кодлолт (дэлгүүрын нэр)
+                Загалмай захиалгын бараа үйлдвэрийн үнээр
               </h1>
               <p className="text-xs text-gray-500">{settings.brand}</p>
             </div>
@@ -1166,7 +1166,7 @@ function Logo() {
         background: "linear-gradient(135deg, #b87333, #d4a373)", // зэсний градиент
       }}
     >
-      logo
+      ✟
     </div>
   );
 }
